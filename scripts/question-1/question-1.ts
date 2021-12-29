@@ -8,6 +8,7 @@
 //  User interface as the return type
 
 interface userModel {
+  id: number,
   firstName: string,
   lastName: string,
   age: number,
@@ -16,6 +17,7 @@ interface userModel {
 
 function createUser(user: userModel) {
   return {
+    id: user.id,
     firstName: user.firstName,
     lastName: user.lastName,
     age: user.age,
