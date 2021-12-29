@@ -5,7 +5,6 @@
 //  isAdmin: boolean
 function createUser(user) {
     return {
-        id: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
         age: user.age,
