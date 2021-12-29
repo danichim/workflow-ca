@@ -6,13 +6,22 @@
 
 // Convert the function to TypeScript, making sure to use the
 //  User interface as the return type
-function createUser(firstName:string, lastName:string, age:number, isAdmin:boolean = false) {
+
+interface userModel {
+  id: number,
+  firstName: string,
+  lastName: string,
+  age: number,
+  isAdmin: boolean
+}
+
+function createUser(user: userModel) {
   return {
-    id: 0,
-    firstName,
-    lastName,
-    age,
-    isAdmin,
+    id: user.id,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    age: user.age,
+    isAdmin: user.isAdmin
   };
 }
 
