@@ -8,10 +8,10 @@
 //  User interface as the return type
 
 interface userModel {
-  id: number,
-  firstName: string,
-  lastName: string,
-  age: number,
+  id: number;
+  firstName: string;
+  lastName: string;
+  age: number;
   isAdmin: boolean
 }
 
