@@ -8,22 +8,16 @@
 //  User interface as the return type
 
 interface userModel {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  isAdmin: boolean
-}
-
-function createUser(user: userModel) {
-  return {
-    id: user.id,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    age: user.age,
-    isAdmin: user.isAdmin
-  };
-}
-
-const newUser = createUser('Ola', 'Nordmann', 18);
-const newAdmin = createUser('Kari', 'Nordmann', 36, true);
+    id?: number;
+    firstName: string;
+    lastName: string;
+    age: number;
+    isAdmin?: boolean
+  }
+  
+  function createUser(user: userModel) {
+    return user;
+  }
+  
+  const newUser = createUser({firstName:'Ola',lastName: 'Nordmann',age: 18});
+  const newAdmin = createUser({firstName:'Kari', lastName:'Nordmann', age:36, isAdmin:true});
